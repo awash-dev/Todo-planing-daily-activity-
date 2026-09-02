@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">2-Tab App</string>
+    <string name="title_activity_main">2-Tab App</string>
+    <string name="package_name">com.example.twotabapp</string>
+    <string name="custom_url_scheme">com.example.twotabapp</string>
+</resources>
