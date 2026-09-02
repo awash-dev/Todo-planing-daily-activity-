@@ -1,4 +1,4 @@
-name: Build and Release Android APK
+name: Build and Release Ionic Android APK
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-apk:
-    name: Build Android APK
+    name: Build Ionic Android APK
     runs-on: ubuntu-latest
 
     steps:
@@ -39,16 +39,16 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install Capacitor CLI
-        run: npm install @capacitor/cli @capacitor/core @capacitor/android
+      - name: Install Ionic & Capacitor CLI
+        run: npm install -g @ionic/cli @capacitor/cli
 
-      - name: Sync Capacitor Android Project
+      - name: Add Capacitor Android Platform
         run: |
-          npx cap init "2-Tab App" "com.example.twotabapp" --web-dir dist
+          npm install @capacitor/core @capacitor/android
           npx cap add android
           npx cap copy android
 
-      - name: Build Android APK with Gradle
+      - name: Build Android APK with Ionic & Gradle
         run: |
           cd android
           chmod +x gradlew

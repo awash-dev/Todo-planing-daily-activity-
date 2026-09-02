@@ -1,0 +1,6 @@
+{
+  "appId": "com.example.twotabapp",
+  "appName": "2-Tab App",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
