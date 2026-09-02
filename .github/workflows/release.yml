@@ -70,8 +70,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: android/app/build/outputs/apk/debug/app-debug.apk
-          tag_name: latest
-          name: "Latest Mobile App Build (APK)"
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
           body: "Automated Android APK build generated via Ionic and Capacitor CI/CD workflow."
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
